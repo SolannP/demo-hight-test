@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ public abstract class PageObjectModel {
      * @param expectedUrl a string of the complete URL Structure (protocols + domain + path + and so on)
      * @return true if the movement on the expected tab have been performed, false otherwise
      */
-    protected boolean moveoToTab(String expectedUrl) {
+    public boolean moveoToTab(String expectedUrl) {
         if(driver.getCurrentUrl() != expectedUrl){
             boolean tabExist = false;
             ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
@@ -33,7 +34,7 @@ public abstract class PageObjectModel {
     }
 
     /**
-     * Move the port view in a way that element appears on the clickable page
+     * Move the port view in a way that element appears on the clickable page (using selenium action)
      * @param element as By object
      * @return true if the movement on the expected element have been performed, false otherwise
      */
@@ -59,7 +60,7 @@ public abstract class PageObjectModel {
     }
 
     /**
-     * Scroll to the port view in a way that element appears on the clickable page
+     * Scroll to the port view in a way that element appears on the clickable page (using javascript)
      * @param element as By locator
      * @return true if the movement on the expected element have been performed, false otherwise
      */

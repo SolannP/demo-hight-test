@@ -37,9 +37,10 @@ public class HightestQuizPage extends PageObjectModel {
     /**
      * Finish the quiz using dedicated button
      */
-    public void clickOnFinishQuizButton(){
+    public HightestSendResultPage clickOnFinishQuizButton(){
         moveToElement(finishButton);
         driver.findElement(finishButton).click();
+        return new HightestSendResultPage(driver);
     }
 
 
