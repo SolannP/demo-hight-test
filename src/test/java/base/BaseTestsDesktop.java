@@ -4,7 +4,9 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import pages.hightest.HightestHomePage;
 import pages.yopmail.YopMailHomePage;
 
@@ -16,7 +18,7 @@ public abstract class BaseTestsDesktop {
     protected HightestHomePage hightestHomePage;
     protected YopMailHomePage yopMailHomePage;
     protected Dimension dimension = new Dimension(1920, 1080);
-    @BeforeClass
+    @BeforeMethod
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","external-resources/chromedriver.exe");
         this.driver = new ChromeDriver();
@@ -31,8 +33,8 @@ public abstract class BaseTestsDesktop {
 
     }
 
-    /*@BeforeClass
+    @AfterMethod
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 }
