@@ -36,7 +36,6 @@ public class SupplementaryQuizTests extends BaseTestsDesktop {
                         .closeNewsLetter();
         HightestQuizPage hightestQuizPage = hightestHomePage.clickOnToolboxTab()
                                                             .clickOnQuizByTitle("Quiz ISTQB niveau Foundation", HightestToolBoxPage.Language.FRA);
-        hightestQuizPage.moveoToTab(urlHightestISTQBQuiz);
 
         hightestQuizPage.respondToQuestion(1).selectRadioButtonAnswer(val1);
         hightestQuizPage.respondToQuestion(2).selectRadioButtonAnswer(val2);
