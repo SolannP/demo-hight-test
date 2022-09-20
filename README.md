@@ -20,17 +20,17 @@ Utterly based on the [Java selenium tutorial][1] using the Page Object Model des
 
 # Possible further improvements
 
-Run in parallel.
+Run in parallel
 
-Using runner for ci/cd.
+Using runner for ci/cd
 
-Different screen size.
+Different screen size
 
-Different navigator.
+Different navigator
 
-Better repport (Cucumber?).
+Better repport (Cucumber?)
 
-> Don't hesitate to provide any feedback
+*Don't hesitate to provide feedback for improving this code*
 
 [1]: https://testautomationu.applitools.com/selenium-webdriver-tutorial-java/ "Selenium tutorial by Test Automation University"
 [2]: https://www.jetbrains.com/idea/download/ "IntilJ Download page"
